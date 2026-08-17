@@ -36,3 +36,29 @@ jobs:
 
       - name: Run CI Checks
         run: composer ci:check
+
+      - name: Build SSR bundle
+        run: npm run build:ssr
+
+      - name: Smoke test SSR server
+        run: |
+          php artisan inertia:start-ssr > storage/logs/inertia-ssr.log 2>&1 &
+          SSR_PID=$!
+          APP_ENV=production php artisan serve --host=127.0.0.1 --port=8000 > storage/logs/laravel-serve.log 2>&1 &
+          APP_PID=$!
+          trap 'kill "$SSR_PID" "$APP_PID" 2>/dev/null || true; php artisan inertia:stop-ssr >/dev/null 2>&1 || true' EXIT
+          sleep 4
+          php artisan inertia:check-ssr
+          response=$(curl --fail --silent http://127.0.0.1:8000/)
+          case "$response" in
+            *'data-server-rendered="true"'*) ;;
+            *) echo "SSR markup missing"; exit 1 ;;
+          esac
+          case "$response" in
+            *"Marco Vega"*) ;;
+            *) echo "SSR identity missing"; exit 1 ;;
+          esac
+          case "$response" in
+            *Laravel*) echo "Starter branding present"; exit 1 ;;
+            *) ;;
+          esac

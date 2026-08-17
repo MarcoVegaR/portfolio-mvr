@@ -9,3 +9,83 @@
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
 }
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root {
+    --brand-navy: #001236;
+    --brand-blue: #0f60f8;
+    --brand-gray: #a3afbd;
+    --brand-white: #ffffff;
+    --background: var(--brand-white);
+    --foreground: var(--brand-navy);
+    --accent: var(--brand-blue);
+    --muted: color-mix(in srgb, var(--brand-navy) 70%, var(--brand-white));
+    --border: color-mix(in srgb, var(--brand-navy) 18%, var(--brand-white));
+    --focus: var(--brand-blue);
+    color-scheme: light;
+}
+
+[data-theme='dark'] {
+    --background: var(--brand-navy);
+    --foreground: var(--brand-white);
+    --accent: var(--brand-blue);
+    --muted: color-mix(in srgb, var(--brand-white) 70%, var(--brand-navy));
+    --border: color-mix(in srgb, var(--brand-white) 22%, var(--brand-navy));
+    --focus: var(--brand-blue);
+    color-scheme: dark;
+}
+
+@theme inline {
+    --color-brand-navy: var(--brand-navy);
+    --color-brand-blue: var(--brand-blue);
+    --color-brand-gray: var(--brand-gray);
+    --color-brand-white: var(--brand-white);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-accent: var(--accent);
+    --color-muted: var(--muted);
+    --color-border: var(--border);
+    --color-focus: var(--focus);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+    min-height: 100%;
+}
+
+html {
+    background-color: var(--background);
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
