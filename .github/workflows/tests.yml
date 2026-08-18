@@ -59,6 +59,14 @@ jobs:
             *) echo "SSR identity missing"; exit 1 ;;
           esac
           case "$response" in
+            *"<header"*"id=\"main\""*) ;;
+            *) echo "SSR header structure missing"; exit 1 ;;
+          esac
+          case "$response" in
+            *"Sobre mí"*"Experiencia"*"Proyectos"*"Contacto"*) ;;
+            *) echo "SSR Spanish navigation labels missing"; exit 1 ;;
+          esac
+          case "$response" in
             *Laravel*) echo "Starter branding present"; exit 1 ;;
             *) ;;
           esac
