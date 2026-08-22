@@ -6,6 +6,10 @@ PRD-02 incorpora el Header global y la navegación principal del portfolio de Ma
 
 La entrega añade identidad navegable, navegación responsive, controles de theme/idioma y una base de accesibilidad. No construye Hero, secciones editoriales, targets falsos, scroll spy ni un CV inexistente.
 
+### Enmienda de producto — 2026-08-20
+
+El portfolio activo usa single-theme dark. `ThemeToggle` y las referencias a alternancia light/dark describen el estado histórico de PRD-02 y quedan deprecated para nuevas entregas; el control no se renderiza en Header ni MobileNav.
+
 ## Producto Y Arquitectura
 
 ### Header global

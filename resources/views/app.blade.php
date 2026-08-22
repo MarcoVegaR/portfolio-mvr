@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es" data-theme="dark">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,8 @@
                     const theme = window.localStorage.getItem('portfolio.theme');
                     const locale = window.localStorage.getItem('portfolio.locale');
 
-                    if (theme === 'light' || theme === 'dark') {
+                    // Dark is the only active product theme; normalize legacy light values.
+                    if (theme === 'dark') {
                         root.dataset.theme = theme;
                     }
 
@@ -20,7 +21,7 @@
                         root.lang = locale;
                     }
                 } catch {
-                    root.dataset.theme = 'light';
+                    root.dataset.theme = 'dark';
                     root.lang = 'es';
                 }
             })();

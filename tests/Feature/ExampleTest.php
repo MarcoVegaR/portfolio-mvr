@@ -5,6 +5,8 @@ test('renders the portfolio foundation', function () {
 
     $response->assertOk();
     $response->assertInertia(
-        fn ($page) => $page->component('portfolio/index'),
+        fn ($page) => $page
+            ->component('portfolio/index')
+            ->where('resumeHref', null),
     );
 });

@@ -7,6 +7,10 @@
 - Implementación: Completada
 - Stack objetivo: Laravel 13, Inertia 3, React 19, TypeScript, Tailwind CSS 4
 
+### Enmienda posterior — 2026-08-20
+
+El producto activo es single-theme dark. Las referencias históricas a `light` como default y a alternancia visible se consideran deprecated. Se conserva `Theme = 'light' | 'dark'`, `ThemeProvider` y `ThemeToggle` únicamente como compatibilidad técnica futura; el bootstrap y la UI activa usan dark y las preferencias legacy `light` se normalizan a dark.
+
 ## 2. Decisiones
 
 ### 2.1 Composición

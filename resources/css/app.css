@@ -17,14 +17,25 @@
     --brand-blue: #0f60f8;
     --brand-gray: #a3afbd;
     --brand-white: #ffffff;
+    /* Dark is the product default; light tokens remain available for legacy support. */
+    --background: var(--brand-navy);
+    --foreground: var(--brand-white);
+    --accent: var(--brand-blue);
+    --muted: color-mix(in srgb, var(--brand-white) 70%, var(--brand-navy));
+    --border: color-mix(in srgb, var(--brand-white) 22%, var(--brand-navy));
+    --focus: var(--brand-blue);
+    --hero-system: #001236;
+    --hero-control: #0f60f8;
+    --header-height: 4rem;
+    --header-anchor-offset: calc(var(--header-height) + 1.5rem);
+    color-scheme: dark;
+}
+
+[data-theme='light'] {
     --background: var(--brand-white);
     --foreground: var(--brand-navy);
-    --accent: var(--brand-blue);
     --muted: color-mix(in srgb, var(--brand-navy) 70%, var(--brand-white));
     --border: color-mix(in srgb, var(--brand-navy) 18%, var(--brand-white));
-    --focus: var(--brand-blue);
-    --header-height: 4rem;
-    --header-anchor-offset: calc(var(--header-height) + 0.5rem);
     color-scheme: light;
 }
 
@@ -49,6 +60,8 @@
     --color-muted: var(--muted);
     --color-border: var(--border);
     --color-focus: var(--focus);
+    --color-hero-system: var(--hero-system);
+    --color-hero-control: var(--hero-control);
 }
 
 *,

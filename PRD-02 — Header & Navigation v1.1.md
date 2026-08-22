@@ -14,6 +14,10 @@
 - Repositorio: Pendiente de completar por el implementador
 - Rama sugerida: `feature/prd-02-header-navigation`
 
+### Nota de producto posterior
+
+Desde el 2026-08-19 el portfolio usa exclusivamente modo dark. `ThemeToggle` se conserva en el código como capacidad futura, pero no se renderiza en las acciones desktop ni en el menú móvil del Header.
+
 ---
 
 ## 2. Resumen ejecutivo

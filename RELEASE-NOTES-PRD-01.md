@@ -6,6 +6,10 @@ PRD-01 reemplaza la experiencia pública del starter Laravel por la foundation i
 
 La entrega no construye todavía Header, Hero, navegación, PageContainer ni contenido editorial. Su propósito es dejar una base técnica clara para que las siguientes entregas puedan crecer sin duplicar responsabilidades.
 
+### Enmienda de producto — 2026-08-20
+
+El portfolio activo usa single-theme dark. Las referencias a light como default describen el estado histórico de PRD-01 y quedan deprecated para nuevas entregas. El contrato técnico legacy se conserva por compatibilidad.
+
 ## Producto Y Arquitectura
 
 ### Ruta raíz del portfolio

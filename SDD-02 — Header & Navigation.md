@@ -8,6 +8,10 @@
 - Implementación: Completada
 - Stack: Laravel 13, Inertia 3, React 19, TypeScript, Tailwind CSS 4
 
+### Enmienda posterior — 2026-08-20
+
+El Header activo es single-theme dark. `ThemeToggle` permanece en el repositorio como capacidad futura, pero no se renderiza en desktop ni mobile. Los criterios históricos de alternancia light/dark y su QA se consideran deprecated; no deben guiar nuevas implementaciones.
+
 ## 2. Verificación heredada
 
 Antes de implementar se verificó que el repositorio contiene:

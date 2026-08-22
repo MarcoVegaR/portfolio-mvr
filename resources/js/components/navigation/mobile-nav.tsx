@@ -3,7 +3,6 @@ import { useEffect, useId, useRef, useState } from 'react';
 import LanguageToggle from '@/components/navigation/language-toggle';
 import NavLink from '@/components/navigation/nav-link';
 import ResumeLink from '@/components/navigation/resume-link';
-import ThemeToggle from '@/components/navigation/theme-toggle';
 import { NAV_ITEMS, getNavigationHref } from '@/data/navigation';
 import { useLocale } from '@/hooks/use-locale';
 
@@ -112,7 +111,7 @@ export default function MobileNav() {
                     <ResumeLink label={locale === 'es' ? 'CV' : 'Resume'} />
                     <div className="ml-auto flex items-center gap-1">
                         <LanguageToggle />
-                        <ThemeToggle />
+                        {/* ThemeToggle is retained for the future light-mode decision, but is intentionally hidden. */}
                     </div>
                 </div>
             </div>

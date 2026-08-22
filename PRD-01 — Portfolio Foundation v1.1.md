@@ -14,6 +14,10 @@
 - Repositorio: Pendiente de completar por el implementador
 - Rama sugerida: `feature/prd-01-portfolio-foundation`
 
+### Nota de producto posterior
+
+Desde el 2026-08-19 el portfolio usa exclusivamente modo dark. El contrato técnico `Theme = 'light' | 'dark'`, `ThemeProvider` y `ThemeToggle` se conservan por compatibilidad y evolución futura, pero el toggle no se muestra y cualquier preferencia legacy `light` se normaliza a `dark`.
+
 ---
 
 ## 2. Resumen ejecutivo
