@@ -254,7 +254,7 @@ export default function HeroVisual() {
                     width="1672"
                 />
             )}
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgb(0_18_54_/_0.98)_0%,rgb(0_18_54_/_0.94)_34%,rgb(0_18_54_/_0.78)_48%,rgb(0_18_54_/_0.28)_64%,transparent_78%),linear-gradient(0deg,rgb(0_18_54_/_0.52),transparent_58%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--hero-overlay-left)_0%,var(--hero-overlay-mid)_34%,var(--hero-overlay-soft)_52%,var(--hero-overlay-fade)_70%,transparent_86%),linear-gradient(0deg,var(--hero-overlay-bottom),transparent_58%)]" />
         </div>
     );
 }

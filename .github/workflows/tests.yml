@@ -67,6 +67,14 @@ jobs:
             *) echo "SSR Spanish navigation labels missing"; exit 1 ;;
           esac
           case "$response" in
+            *about*about-heading*"Sobre mí"*Entender*Definir*"Construir y validar"*) ;;
+            *) echo "SSR About section missing"; exit 1 ;;
+          esac
+          case "$response" in
+            *#about*) ;;
+            *) echo "SSR About navigation target missing"; exit 1 ;;
+          esac
+          case "$response" in
             *"Welcome to Laravel"*|*"Laravel Breeze"*|*"Laravel Starter Kit"*)
               echo "Starter branding present"
               exit 1

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es" data-theme="light">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,19 +9,15 @@
                 const root = document.documentElement;
 
                 try {
-                    const theme = window.localStorage.getItem('portfolio.theme');
                     const locale = window.localStorage.getItem('portfolio.locale');
 
-                    // Dark is the only active product theme; normalize legacy light values.
-                    if (theme === 'dark') {
-                        root.dataset.theme = theme;
-                    }
+                    root.dataset.theme = 'light';
 
                     if (locale === 'es' || locale === 'en') {
                         root.lang = locale;
                     }
                 } catch {
-                    root.dataset.theme = 'dark';
+                    root.dataset.theme = 'light';
                     root.lang = 'es';
                 }
             })();

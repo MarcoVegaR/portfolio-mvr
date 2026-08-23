@@ -13,7 +13,7 @@ export default function Header() {
         <header className="fixed inset-x-0 top-4 z-50 px-4 sm:px-6 lg:px-8">
             <div
                 aria-hidden="true"
-                className="pointer-events-none fixed inset-x-0 -top-4 z-0 h-24 bg-[linear-gradient(180deg,rgb(0_18_54)_0%,rgb(0_18_54)_72%,rgb(0_18_54_/_0)_100%)]"
+                className="pointer-events-none fixed inset-x-0 -top-4 z-0 h-24 bg-[linear-gradient(180deg,var(--background)_0%,var(--background)_72%,transparent_100%)]"
             />
             <PageContainer className="relative z-10 grid min-h-16 max-w-[90rem] grid-cols-[1fr_auto] items-center gap-4 rounded-2xl border border-border/70 bg-background px-4 shadow-[0_10px_35px_rgb(0_18_54_/_0.10)] sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-8 dark:shadow-[0_10px_35px_rgb(0_0_0_/_0.28)]">
                 <Brand />

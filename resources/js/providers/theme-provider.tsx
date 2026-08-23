@@ -7,12 +7,7 @@ import {
 } from 'react';
 import type { ReactNode } from 'react';
 
-import {
-    isTheme,
-    readPreference,
-    THEME_STORAGE_KEY,
-    writePreference,
-} from '@/lib/preferences';
+import { isTheme, THEME_STORAGE_KEY, writePreference } from '@/lib/preferences';
 import type { Theme } from '@/types/foundation';
 
 type ThemeContextValue = {
@@ -27,15 +22,10 @@ function applyTheme(theme: Theme): void {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-    // Dark is the only active product theme. The light contract remains for
-    // compatibility with the existing provider and ThemeToggle component.
-    const [theme, setThemeState] = useState<Theme>('dark');
+    const [theme, setThemeState] = useState<Theme>('light');
 
     useEffect(() => {
-        const storedTheme = readPreference(THEME_STORAGE_KEY);
-        // Ignore legacy light preferences now that the product is dark-only.
-        const initialTheme: Theme =
-            storedTheme === 'dark' ? storedTheme : 'dark';
+        const initialTheme: Theme = 'light';
 
         startTransition(() => {
             setThemeState(initialTheme);
