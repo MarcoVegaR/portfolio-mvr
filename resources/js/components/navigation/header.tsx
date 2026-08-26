@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import PageContainer from '@/components/layout/page-container';
 import Brand from '@/components/navigation/brand';
 import DesktopNav from '@/components/navigation/desktop-nav';
@@ -8,14 +10,26 @@ import { useLocale } from '@/hooks/use-locale';
 
 export default function Header() {
     const { locale } = useLocale();
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => setIsScrolled(window.scrollY > 24);
+
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <header className="fixed inset-x-0 top-4 z-50 px-4 sm:px-6 lg:px-8">
+        <header
+            className={`environment-header fixed inset-x-0 top-4 z-50 px-4 sm:px-6 lg:px-8 ${isScrolled ? 'environment-header-scrolled' : ''}`}
+        >
             <div
                 aria-hidden="true"
-                className="pointer-events-none fixed inset-x-0 -top-4 z-0 h-24 bg-[linear-gradient(180deg,var(--background)_0%,var(--background)_72%,transparent_100%)]"
+                className="environment-header-scrim pointer-events-none fixed inset-x-0 -top-4 z-0 h-28"
             />
-            <PageContainer className="relative z-10 grid min-h-16 max-w-[90rem] grid-cols-[1fr_auto] items-center gap-4 rounded-2xl border border-border/70 bg-background px-4 shadow-[0_10px_35px_rgb(0_18_54_/_0.10)] sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-8 dark:shadow-[0_10px_35px_rgb(0_0_0_/_0.28)]">
+            <PageContainer className="environment-header-surface relative z-10 grid min-h-14 max-w-[90rem] grid-cols-[1fr_auto] items-center gap-4 rounded-xl px-4 sm:px-6 lg:grid-cols-[1fr_auto_1fr] lg:px-8">
                 <Brand />
 
                 <DesktopNav />

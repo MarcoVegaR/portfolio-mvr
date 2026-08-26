@@ -10,14 +10,10 @@ export default function Brand() {
             href={home()}
         >
             <img
-                alt=""
-                className="size-9 object-contain dark:brightness-0 dark:invert"
-                src="/brand/mvr-mark.png"
+                alt="Marco Vega"
+                className="h-10 w-auto max-w-[12rem] object-contain"
+                src="/brand/mvr-logo.png"
             />
-            <span className="h-8 w-px bg-border" />
-            <span className="text-lg font-medium tracking-tight sm:text-xl">
-                Marco <span className="text-brand-blue">Vega</span>
-            </span>
         </Link>
     );
 }

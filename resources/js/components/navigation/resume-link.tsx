@@ -10,7 +10,7 @@ export default function ResumeLink({ href, label }: ResumeLinkProps) {
 
     return (
         <a
-            className="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-foreground underline-offset-4 transition-colors hover:text-brand-blue hover:underline"
+            className="inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-foreground underline-offset-4 transition-colors hover:text-accent hover:underline"
             href={href}
             rel="noreferrer"
             target="_blank"

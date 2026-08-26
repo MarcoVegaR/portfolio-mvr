@@ -10,7 +10,7 @@ export default function ThemeToggle() {
         <button
             aria-label={locale === 'es' ? 'Modo oscuro' : 'Dark mode'}
             aria-pressed={isDark}
-            className="inline-flex size-11 items-center justify-center rounded-md text-foreground transition-colors hover:text-brand-blue"
+            className="inline-flex size-11 items-center justify-center rounded-md text-foreground transition-colors hover:text-accent"
             onClick={() => setTheme(isDark ? 'light' : 'dark')}
             type="button"
         >

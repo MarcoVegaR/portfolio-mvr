@@ -37,14 +37,14 @@ export default function About() {
         <section
             ref={sectionRef}
             aria-labelledby="about-heading"
-            className="about-section relative z-10 -mt-20 pt-28 pb-20 sm:-mt-24 sm:pt-32 sm:pb-24 lg:pb-32"
+            className="about-section relative z-10 -mt-20 pt-24 pb-12 sm:-mt-24 sm:pt-28 sm:pb-16"
             id="about"
         >
             <PageContainer>
                 <header className="flex items-center gap-4">
                     <span aria-hidden="true" className="h-px w-10 bg-accent" />
                     <h2
-                        className="text-3xl font-semibold tracking-[-0.04em] text-brand-navy sm:text-4xl"
+                        className="text-3xl font-semibold tracking-[-0.04em] text-accent sm:text-4xl"
                         id="about-heading"
                     >
                         {copy.heading}

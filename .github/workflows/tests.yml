@@ -71,6 +71,18 @@ jobs:
             *) echo "SSR About section missing"; exit 1 ;;
           esac
           case "$response" in
+            *about*core-stack*"Core Stack"*"AI Engineering"*"Application Engineering"*Complementary"*) ;;
+            *) echo "SSR Core Stack section missing or out of order"; exit 1 ;;
+          esac
+          case "$response" in
+            *"Laravel AI SDK"*MCP*OpenClaw*Laravel*PHP*PostgreSQL*React*TypeScript*"Inertia.js"*Redis*Docker*"GitHub Actions / CI/CD"*"Laravel Cloud"*Pest*Playwright*"Laravel Nightwatch"*) ;;
+            *) echo "SSR Core Stack technologies missing"; exit 1 ;;
+          esac
+          case "$response" in
+            *"Support Systems"*Architecture*Runtime*Delivery*Infrastructure*Quality*Observability*) ;;
+            *) echo "SSR Core Stack support clusters missing"; exit 1 ;;
+          esac
+          case "$response" in
             *#about*) ;;
             *) echo "SSR About navigation target missing"; exit 1 ;;
           esac

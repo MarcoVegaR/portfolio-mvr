@@ -199,7 +199,7 @@ export default function HeroVisual() {
         <div
             ref={visualRef}
             aria-hidden="true"
-            className="absolute inset-0 overflow-hidden bg-hero-system"
+            className="hero-visual absolute inset-0 overflow-hidden bg-hero-system"
         >
             <ResponsivePoster isFinal={isFinal} />
             {videoMounted && (
@@ -254,7 +254,7 @@ export default function HeroVisual() {
                     width="1672"
                 />
             )}
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--hero-overlay-left)_0%,var(--hero-overlay-mid)_34%,var(--hero-overlay-soft)_52%,var(--hero-overlay-fade)_70%,transparent_86%),linear-gradient(0deg,var(--hero-overlay-bottom),transparent_58%)]" />
+            <div className="hero-overlay absolute inset-0 bg-[linear-gradient(90deg,var(--hero-overlay-left)_0%,var(--hero-overlay-mid)_34%,var(--hero-overlay-soft)_52%,var(--hero-overlay-fade)_70%,transparent_86%),linear-gradient(0deg,var(--hero-overlay-bottom),transparent_58%)]" />
         </div>
     );
 }

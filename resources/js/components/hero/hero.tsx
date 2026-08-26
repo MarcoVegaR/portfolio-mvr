@@ -10,7 +10,7 @@ export default function Hero({ resumeHref }: HeroProps) {
     return (
         <section
             aria-labelledby="hero-heading"
-            className="relative isolate min-h-[42rem] overflow-hidden py-8 sm:min-h-[48rem] sm:py-12 lg:min-h-[100svh] lg:py-16"
+            className="relative isolate min-h-[42rem] overflow-hidden py-0 sm:min-h-[48rem] lg:min-h-[100svh]"
         >
             <HeroVisual />
             <PageContainer className="relative z-10 flex min-h-[40rem] items-start pt-28 sm:min-h-[46rem] sm:pt-28 lg:min-h-[100svh] lg:items-center lg:pt-0">

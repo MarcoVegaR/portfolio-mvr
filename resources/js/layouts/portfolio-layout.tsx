@@ -15,7 +15,7 @@ export default function PortfolioLayout({
             <LocaleProvider>
                 <SkipLink />
                 <Header />
-                <main id="main" tabIndex={-1}>
+                <main className="environment-canvas" id="main" tabIndex={-1}>
                     {children}
                 </main>
             </LocaleProvider>

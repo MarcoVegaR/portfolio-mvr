@@ -65,15 +65,15 @@ export default function MatrixTerminal({ active, copy }: MatrixTerminalProps) {
                         <MatrixRain active={active} />
                         <div aria-hidden="true" className="matrix-glass" />
                         <div className="relative z-10">
-                            <div className="font-mono text-xs text-emerald-100/75 sm:text-sm">
+                            <div className="font-mono text-xs text-[#f1b84a]/90 sm:text-sm">
                                 <p>
                                     <span className="sr-only">{command}</span>
-                                    <span className="text-emerald-300">
+                                    <span className="text-[#f1b84a]">
                                         {visibleCommand}
                                     </span>
                                     <span
                                         aria-hidden="true"
-                                        className="matrix-cursor ml-1 text-emerald-200"
+                                        className="matrix-cursor ml-1 text-[#fcd464]"
                                     >
                                         █
                                     </span>
@@ -81,17 +81,17 @@ export default function MatrixTerminal({ active, copy }: MatrixTerminalProps) {
                             </div>
 
                             <h3
-                                className="matrix-output matrix-output-title mt-10 font-mono text-base font-semibold tracking-[0.14em] text-emerald-100 uppercase sm:text-lg"
+                                className="matrix-output matrix-output-title mt-10 font-mono text-base font-semibold tracking-[0.14em] text-[#fcd464] uppercase sm:text-lg"
                                 id="approach-heading"
                             >
                                 {copy.summaryLabel}
                             </h3>
                             <span
                                 aria-hidden="true"
-                                className="matrix-rule mt-5 block h-px w-10 bg-emerald-300"
+                                className="matrix-rule mt-5 block h-px w-10 bg-[#fcd464]"
                             />
 
-                            <div className="mt-6 max-w-5xl space-y-2 font-mono text-sm leading-7 text-emerald-50/90 sm:text-base sm:leading-8">
+                            <div className="mt-6 max-w-5xl space-y-2 font-mono text-sm leading-7 text-[#f1b84a]/95 sm:text-base sm:leading-8">
                                 {copy.terminalIntro.map((line, index) => (
                                     <p
                                         className="matrix-output matrix-output-line"
@@ -105,13 +105,13 @@ export default function MatrixTerminal({ active, copy }: MatrixTerminalProps) {
                                 ))}
                             </div>
 
-                            <div className="matrix-output matrix-output-workflow mt-8 border-t border-dashed border-emerald-300/35 pt-6">
-                                <h4 className="font-mono text-base font-semibold tracking-[0.12em] text-emerald-300 uppercase sm:text-lg">
+                            <div className="matrix-output matrix-output-workflow mt-8 border-t border-dashed border-[#f1b84a]/45 pt-6">
+                                <h4 className="font-mono text-base font-semibold tracking-[0.12em] text-[#fcd464] uppercase sm:text-lg">
                                     {copy.workflowLabel}
                                 </h4>
                                 <span
                                     aria-hidden="true"
-                                    className="matrix-rule mt-4 block h-px w-10 bg-emerald-300"
+                                    className="matrix-rule mt-4 block h-px w-10 bg-[#fcd464]"
                                 />
 
                                 <ol className="mt-6 grid gap-4 font-mono text-sm sm:text-base">
@@ -123,7 +123,7 @@ export default function MatrixTerminal({ active, copy }: MatrixTerminalProps) {
                                                 animationDelay: `${780 + index * 80}ms`,
                                             }}
                                         >
-                                            <span className="text-emerald-300">
+                                            <span className="text-[#f1b84a]">
                                                 [
                                                 {String(index + 1).padStart(
                                                     2,
@@ -131,11 +131,11 @@ export default function MatrixTerminal({ active, copy }: MatrixTerminalProps) {
                                                 )}
                                                 ]
                                             </span>
-                                            <span className="font-semibold text-emerald-100 uppercase">
+                                            <span className="font-semibold text-[#fcd464] uppercase">
                                                 {step.title}
                                             </span>
-                                            <span className="text-emerald-100/75">
-                                                <span className="text-emerald-300/70">
+                                            <span className="text-[#f1b84a]/85">
+                                                <span className="text-[#f1b84a]/80">
                                                     |-&gt;
                                                 </span>{' '}
                                                 {step.description}
@@ -145,7 +145,7 @@ export default function MatrixTerminal({ active, copy }: MatrixTerminalProps) {
                                 </ol>
                             </div>
 
-                            <p className="matrix-output matrix-output-footer mt-8 font-mono text-xs text-emerald-300/80">
+                            <p className="matrix-output matrix-output-footer mt-8 font-mono text-xs text-[#f1b84a]/90">
                                 ~/
                                 <span
                                     aria-hidden="true"

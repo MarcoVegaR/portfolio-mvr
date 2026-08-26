@@ -14,7 +14,7 @@ export default function HeroContent({ resumeHref }: HeroContentProps) {
             <div className="flex items-center gap-3">
                 <span
                     aria-hidden="true"
-                    className="h-px w-8 bg-hero-control shadow-[0_0_12px_rgb(15_96_248_/_0.85)]"
+                    className="h-px w-8 bg-hero-control shadow-[0_0_12px_rgb(252_212_100_/_0.9)]"
                 />
                 <p className="text-xs font-semibold tracking-[0.28em] text-brand-white/80 uppercase sm:text-sm">
                     {copy.role}

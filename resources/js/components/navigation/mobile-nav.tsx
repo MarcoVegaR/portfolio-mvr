@@ -58,7 +58,7 @@ export default function MobileNav() {
                 aria-controls={panelId}
                 aria-expanded={isOpen}
                 aria-label={triggerLabel}
-                className="inline-flex size-11 items-center justify-center rounded-md text-foreground transition-colors hover:text-brand-blue"
+                className="inline-flex size-11 items-center justify-center rounded-md text-foreground transition-colors hover:text-accent"
                 onClick={() => setIsOpen((open) => !open)}
                 onKeyDown={handleKeyDown}
                 ref={triggerRef}
