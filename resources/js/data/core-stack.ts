@@ -38,6 +38,7 @@ export type CoreStackCopy = {
     resumeMotion: string;
     systemOnline: string;
     supportTitle: string;
+    signalLink: string;
 };
 
 export const CORE_STACK_COPY: Record<Locale, CoreStackCopy> = {
@@ -46,8 +47,9 @@ export const CORE_STACK_COPY: Record<Locale, CoreStackCopy> = {
         intro: 'Tecnologías principales con las que construyo e integro aplicaciones y sistemas con IA.',
         pauseMotion: 'Pausar animación',
         resumeMotion: 'Reanudar animación',
-        systemOnline: 'SISTEMA ONLINE',
-        supportTitle: 'Support Systems',
+        systemOnline: 'SISTEMA EN LÍNEA',
+        supportTitle: 'Sistemas de soporte',
+        signalLink: 'ENLACE DE SEÑAL',
     },
     en: {
         heading: 'Core Stack',
@@ -56,13 +58,14 @@ export const CORE_STACK_COPY: Record<Locale, CoreStackCopy> = {
         resumeMotion: 'Resume animation',
         systemOnline: 'SYSTEM ONLINE',
         supportTitle: 'Support Systems',
+        signalLink: 'SIGNAL LINK',
     },
 };
 
 export const CORE_STACK_GROUPS: readonly StackGroup[] = [
     {
         id: 'ai-engineering',
-        title: { es: 'AI Engineering', en: 'AI Engineering' },
+        title: { es: 'Ingeniería de IA', en: 'AI Engineering' },
         priority: 'primary',
         technologies: [
             { id: 'laravel-ai-sdk', name: 'Laravel AI SDK' },
@@ -73,7 +76,7 @@ export const CORE_STACK_GROUPS: readonly StackGroup[] = [
     {
         id: 'application-engineering',
         title: {
-            es: 'Application Engineering',
+            es: 'Ingeniería de aplicaciones',
             en: 'Application Engineering',
         },
         priority: 'primary',
@@ -87,7 +90,7 @@ export const CORE_STACK_GROUPS: readonly StackGroup[] = [
     },
     {
         id: 'complementary',
-        title: { es: 'Complementary', en: 'Complementary' },
+        title: { es: 'Complementario', en: 'Complementary' },
         priority: 'secondary',
         technologies: [
             { id: 'inertia', name: 'Inertia.js' },
@@ -99,12 +102,12 @@ export const CORE_STACK_GROUPS: readonly StackGroup[] = [
             { id: 'playwright', name: 'Playwright' },
             { id: 'laravel-nightwatch', name: 'Laravel Nightwatch' },
         ],
-        displayTitle: { es: 'Support Systems', en: 'Support Systems' },
+        displayTitle: { es: 'Sistemas de soporte', en: 'Support Systems' },
         supportClusters: [
             {
                 id: 'architecture-runtime',
                 title: {
-                    es: 'Architecture & Runtime',
+                    es: 'Arquitectura y ejecución',
                     en: 'Architecture & Runtime',
                 },
                 technologies: [
@@ -115,7 +118,7 @@ export const CORE_STACK_GROUPS: readonly StackGroup[] = [
             {
                 id: 'delivery-infrastructure',
                 title: {
-                    es: 'Delivery & Infrastructure',
+                    es: 'Entrega e infraestructura',
                     en: 'Delivery & Infrastructure',
                 },
                 technologies: [
@@ -127,7 +130,7 @@ export const CORE_STACK_GROUPS: readonly StackGroup[] = [
             {
                 id: 'quality-observability',
                 title: {
-                    es: 'Quality & Observability',
+                    es: 'Calidad y observabilidad',
                     en: 'Quality & Observability',
                 },
                 technologies: [

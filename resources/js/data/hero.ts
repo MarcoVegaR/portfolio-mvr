@@ -12,9 +12,9 @@ export type HeroCopy = {
 export const HERO_COPY: Record<Locale, HeroCopy> = {
     es: {
         name: 'Marco Vega',
-        role: 'AI Engineer',
+        role: 'Ingeniero de IA',
         description:
-            'Construyo aplicaciones de negocio y sistemas con IA. Combino desarrollo full stack con un enfoque en backend, Laravel y orquestación de agentes.',
+            'Construyo aplicaciones de negocio y sistemas con IA. Combino desarrollo de aplicaciones con un enfoque en servicios del lado del servidor, Laravel y orquestación de agentes.',
         projectsLabel: 'Ver proyectos',
         resumeLabel: 'CV',
         githubLabel: 'GitHub',

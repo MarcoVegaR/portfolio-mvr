@@ -71,7 +71,7 @@ jobs:
             *) echo "SSR About section missing"; exit 1 ;;
           esac
           case "$response" in
-            *about*core-stack*"Core Stack"*"AI Engineering"*"Application Engineering"*Complementary"*) ;;
+            *about*core-stack*"Core Stack"*"Ingeniería de IA"*"Ingeniería de aplicaciones"*Complementario*) ;;
             *) echo "SSR Core Stack section missing or out of order"; exit 1 ;;
           esac
           case "$response" in
@@ -79,8 +79,22 @@ jobs:
             *) echo "SSR Core Stack technologies missing"; exit 1 ;;
           esac
           case "$response" in
-            *"Support Systems"*Architecture*Runtime*Delivery*Infrastructure*Quality*Observability*) ;;
+            *"Sistemas de soporte"*Arquitectura*ejecución*Entrega*infraestructura*Calidad*observabilidad*) ;;
             *) echo "SSR Core Stack support clusters missing"; exit 1 ;;
+          esac
+          case "$response" in
+            *about*core-stack*experience*experience-heading*"Experiencia"*"Caracoders Pro Services"*"Federación Venezolana de Fútbol"*FIFA*) ;;
+            *) echo "SSR Experience section missing or out of order"; exit 1 ;;
+          esac
+          case "$response" in *"2020 — Actualidad"*) ;; *) echo "SSR Caracoders period missing"; exit 1 ;; esac
+          case "$response" in *"Gerente General"*) ;; *) echo "SSR Caracoders role missing"; exit 1 ;; esac
+          case "$response" in *"2011 — 2020"*) ;; *) echo "SSR FVF period missing"; exit 1 ;; esac
+          case "$response" in *"Gerente de Tecnología"*) ;; *) echo "SSR FVF role missing"; exit 1 ;; esac
+          case "$response" in *"2012 — 2018"*) ;; *) echo "SSR FIFA period missing"; exit 1 ;; esac
+          case "$response" in *"Gerente de Proyectos"*) ;; *) echo "SSR FIFA role missing"; exit 1 ;; esac
+          case "$response" in
+            *"Cargo simultáneo con Gerente de Tecnología — FVF"*) ;;
+            *) echo "SSR FIFA parallel-role note missing"; exit 1 ;;
           esac
           case "$response" in
             *#about*) ;;

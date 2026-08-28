@@ -2,6 +2,7 @@ import { Head } from '@inertiajs/react';
 
 import About from '@/components/about/about';
 import CoreStack from '@/components/core-stack/core-stack';
+import Experience from '@/components/experience/experience';
 import Hero from '@/components/hero/hero';
 import PortfolioLayout from '@/layouts/portfolio-layout';
 
@@ -17,6 +18,7 @@ function PortfolioPage({ resumeHref }: PortfolioPageProps) {
                 <Hero resumeHref={resumeHref} />
                 <About />
                 <CoreStack />
+                <Experience />
             </PortfolioLayout>
         </>
     );

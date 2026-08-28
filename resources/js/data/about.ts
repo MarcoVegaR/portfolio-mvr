@@ -22,8 +22,8 @@ export const ABOUT_COPY: Record<Locale, AboutCopy> = {
         summaryLabel: 'perfil.resumen',
         workflowLabel: 'flujo.estado',
         terminalIntro: [
-            'Soy AI Engineer enfocado en orquestar agentes de IA para construir software.',
-            'Mi base es Full Stack, con mayor profundidad en backend y Laravel.',
+            'Soy ingeniero de IA enfocado en orquestar agentes de IA para construir software.',
+            'Mi base es el desarrollo de aplicaciones, con mayor profundidad en servicios del lado del servidor y Laravel.',
             'Construyo aplicaciones de negocio, agentes y copilotos asistidos por IA.',
         ],
         approach: [
@@ -35,7 +35,7 @@ export const ABOUT_COPY: Record<Locale, AboutCopy> = {
             {
                 id: 'define',
                 title: 'Definir',
-                description: 'Especificación y arquitectura',
+                description: 'Especificaciones, arquitectura y restricciones',
             },
             {
                 id: 'build-validate',

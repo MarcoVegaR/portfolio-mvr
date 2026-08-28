@@ -18,6 +18,7 @@ type StackMapProps = {
     onToggleMotion: () => void;
     pauseMotion: string;
     resumeMotion: string;
+    signalLink: string;
     supportGroup: StackGroup;
     supportTitle: string;
     systemOnline: string;
@@ -64,12 +65,14 @@ function PrimaryCard({
     locale,
     onToggle,
     number,
+    signalLink,
 }: {
     activeGroupId: StackGroupId | null;
     group: StackGroup;
     locale: Locale;
     number: string;
     onToggle: (groupId: StackGroupId) => void;
+    signalLink: string;
 }) {
     const isActive = activeGroupId === group.id;
 
@@ -98,7 +101,7 @@ function PrimaryCard({
             </header>
             <TechnologyList technologies={group.technologies} />
             <div className={styles.signalStatus}>
-                <span>SIGNAL LINK</span>
+                <span>{signalLink}</span>
                 <SignalTrace />
             </div>
         </article>
@@ -160,9 +163,11 @@ function ClusterGlyph({ clusterId }: { clusterId: SupportCluster['id'] }) {
 function SupportCluster({
     cluster,
     locale,
+    signalLink,
 }: {
     cluster: SupportCluster;
     locale: Locale;
+    signalLink: string;
 }) {
     return (
         <article className={styles.supportCluster}>
@@ -172,7 +177,7 @@ function SupportCluster({
             </h4>
             <TechnologyList technologies={cluster.technologies} />
             <div className={styles.signalStatus}>
-                <span>SIGNAL LINK</span>
+                <span>{signalLink}</span>
                 <SignalTrace />
             </div>
         </article>
@@ -189,6 +194,7 @@ export default function StackMap({
     onToggleMotion,
     pauseMotion,
     resumeMotion,
+    signalLink,
     supportGroup,
     supportTitle,
     systemOnline,
@@ -263,6 +269,7 @@ export default function StackMap({
                     locale={locale}
                     number="01"
                     onToggle={onToggle}
+                    signalLink={signalLink}
                 />
                 <PrimaryCard
                     activeGroupId={activeGroupId}
@@ -270,6 +277,7 @@ export default function StackMap({
                     locale={locale}
                     number="02"
                     onToggle={onToggle}
+                    signalLink={signalLink}
                 />
             </div>
 
@@ -298,7 +306,7 @@ export default function StackMap({
                             type="button"
                         >
                             <span>03</span>
-                            <span>COMPLEMENTARY</span>
+                            <span>{supportGroup.title[locale]}</span>
                             <span className={styles.supportTitle}>
                                 / {supportTitle}
                             </span>
@@ -314,6 +322,7 @@ export default function StackMap({
                             cluster={cluster}
                             key={cluster.id}
                             locale={locale}
+                            signalLink={signalLink}
                         />
                     ))}
                 </div>

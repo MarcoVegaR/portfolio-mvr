@@ -91,6 +91,7 @@ export default function CoreStack() {
                     supportGroup={supportGroup}
                     systemOnline={copy.systemOnline}
                     supportTitle={copy.supportTitle}
+                    signalLink={copy.signalLink}
                     onToggleMotion={() => setIsPaused((paused) => !paused)}
                     pauseMotion={copy.pauseMotion}
                     resumeMotion={copy.resumeMotion}

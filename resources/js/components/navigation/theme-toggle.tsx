@@ -5,10 +5,18 @@ export default function ThemeToggle() {
     const { locale } = useLocale();
     const { theme, setTheme } = useTheme();
     const isDark = theme === 'dark';
+    const label =
+        locale === 'es'
+            ? isDark
+                ? 'Activar modo claro'
+                : 'Activar modo oscuro'
+            : isDark
+              ? 'Enable light mode'
+              : 'Enable dark mode';
 
     return (
         <button
-            aria-label={locale === 'es' ? 'Modo oscuro' : 'Dark mode'}
+            aria-label={label}
             aria-pressed={isDark}
             className="inline-flex size-11 items-center justify-center rounded-md text-foreground transition-colors hover:text-accent"
             onClick={() => setTheme(isDark ? 'light' : 'dark')}
